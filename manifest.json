@@ -1,7 +1,7 @@
 {
-  "name": "BEYAZ KUŞ AI Asistan",
+  "name": "BEYAZ KUŞ AI Asistan v2.5",
   "short_name": "BEYAZ KUŞ",
-  "description": "Dünyanın en hızlı AI asistanı - matematik dehası ve sesli konuşma",
+  "description": "Dünyanın en hızlı AI asistanı v2.5 - matematik dehası ve sesli konuşma",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#667eea",

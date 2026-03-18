@@ -1,6 +1,10 @@
-# BEYAZ KUŞ AI Asistan
+# BEYAZ KUŞ AI v2.5
 
-Dünyanın en hızlı AI asistanı - Matematik dehası ve sesli konuşma özellikleri.
+**Dünyanın En Hızlı AI Asistanı - Çoklu Dil Destekli, Matematik Dehası, Sesli Konuşma**
+
+> Yaratıcı: **Ödül Ensar Yılmaz**  
+> Versiyon: **2.5**  
+> Yayın Yılı: **2026**
 
 ## Mobil Uygulama İndirme
 

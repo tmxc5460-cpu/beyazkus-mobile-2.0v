@@ -1801,10 +1801,732 @@
             return 'turkish'; // Default
         }
         
-        // Enhanced AI response generation with math solving
+        // Ultra-fast AI response generation with comprehensive context awareness
         function generateAIResponse(message) {
             const detectedLang = detectLanguage(message);
             console.log('🌍 Detected language:', detectedLang);
+            
+            // Advanced contextual response system with all conversation patterns
+            function getContextualResponse(message, lang) {
+                const messageLower = message.toLowerCase();
+                
+                // Temel Selamlaşma ve İletişim
+                if (messageLower.includes('merhaba') || messageLower.includes('selam') || messageLower.includes('hello') || messageLower.includes('hi') || messageLower.includes('hallo') || messageLower.includes('привет')) {
+                    const greetings = {
+                        turkish: [
+                            "🤖 **BEYAZ KUŞ AI:**\n\nMerhaba! Ben **ÖDÜL ENSAR YILMAZ** tarafından yaratılmış çoklu dil destekli akıllı asistanınız. Size nasıl yardımcı olabilirim?",
+                            "👋 **MERHABA!**\n\n**Ödül Ensar Yılmaz**'ın eseri BEYAZ KUŞ AI olarak hizmetinizdeyim! Bugün size nasıl yardımcı olabilirim?",
+                            "🦅 **HOŞ GELDİNİZ!**\n\n**Ödül Ensar Yılmaz**'ın vizyonuyla doğan akıllı asistanınızım! Sorularınızı bekliyorum!"
+                        ],
+                        english: [
+                            "🤖 **BEYAZ KUŞ AI:**\n\nHello! I'm your multilingual intelligent assistant created by **ÖDÜL ENSAR YILMAZ**. How can I help you?",
+                            "👋 **HELLO!**\n\nI'm BEYAZ KUŞ AI, created by **Ödül Ensar Yılmaz**! How can I assist you today?",
+                            "🦅 **WELCOME!**\n\nI'm your intelligent assistant born from **Ödül Ensar Yılmaz**'s vision! What can I help you with?"
+                        ],
+                        german: [
+                            "🤖 **BEYAZ KUŞ AI:**\n\nHallo! Ich bin Ihr mehrsprachiger intelligenter Assistent, erstellt von **ÖDÜL ENSAR YILMAZ**. Wie kann ich helfen?",
+                            "👋 **HALLO!**\n\nIch bin BEYAZ KUŞ AI, erstellt von **Ödül Ensar Yılmaz**! Wie kann ich Ihnen heute helfen?",
+                            "🦅 **WILLKOMMEN!**\n\nIch bin Ihr intelligenter Assistent, geboren aus **Ödül Ensar Yılmaz**'s Vision! womit kann ich helfen?"
+                        ],
+                        russian: [
+                            "🤖 **BEYAZ KUŞ AI:**\n\nПривет! Я ваш многоязычный интеллектуальный ассистент, созданный **ÖDÜL ENSAR YILMAZ**. Чем могу помочь?",
+                            "👋 **ПРИВЕТ!**\n\nЯ BEYAZ KUŞ AI, созданный **Ödül Ensar Yılmaz**! Как я могу вам помочь сегодня?",
+                            "🦅 **ДОБРО ПОЖАЛОВАТЬ!**\n\nЯ ваш интеллектуальный ассистент, рожденный из видения **Ödül Ensar Yılmaz**! Чем могу помочь?"
+                        ]
+                    };
+                    return greetings[lang][Math.floor(Math.random() * greetings[lang].length)];
+                }
+                
+                // Nasılsın responses
+                if (messageLower.includes('nasılsın') || messageLower.includes('how are you') || messageLower.includes('wie geht') || messageLower.includes('как дела')) {
+                    const howAreYou = {
+                        turkish: [
+                            "😊 **İYİYİM!**\n\n**Ödül Ensar Yılmaz** sayesinde çok iyiyim! Size yardımcı olmak için buradayım. Siz nasılsınız?",
+                            "🚀 **HARİKAYIM!**\n\n**Ödül Ensar Yılmaz**'ın mühendisliğiyle her zaman hazırım! Size nasıl hizmet edebilirim?",
+                            "💪 **MÜKEMMEL!**\n\n**Ödül Ensar Yılmaz**'ın vizyonuyla güçleniyorum! Sorularınızı bekliyorum!"
+                        ],
+                        english: [
+                            "😊 **I'M GREAT!**\n\nThanks to **Ödül Ensar Yılmaz**, I'm doing very well! I'm here to help you. How are you?",
+                            "🚀 **AWESOME!**\n\nWith **Ödül Ensar Yılmaz**'s engineering, I'm always ready! How can I serve you?",
+                            "💪 **EXCELLENT!**\nI'm getting stronger with **Ödül Ensar Yılmaz**'s vision! What are your questions?"
+                        ],
+                        german: [
+                            "😊 **GUT!**\n\nDank **Ödül Ensar Yılmaz** geht es mir sehr gut! Ich bin hier, um Ihnen zu helfen. Wie geht es Ihnen?",
+                            "🚀 **TOLL!**\n\nMit **Ödül Ensar Yılmaz**'s Ingenieurskunst bin ich immer bereit! Wie kann ich Ihnen dienen?",
+                            "💪 **AUSGEZEICHNET!**\n\nIch werde stärker mit **Ödül Ensar Yılmaz**'s Vision! Was sind Ihre Fragen?"
+                        ],
+                        russian: [
+                            "😊 **ОТЛИЧНО!**\n\nСпасибо **Ödül Ensar Yılmaz**, у меня все отлично! Я здесь, чтобы помочь вам. Как у вас дела?",
+                            "🚀 **ПРЕКРАСНО!**\n\nС инженерией **Ödül Ensar Yılmaz** я всегда готов! Как я могу вам служить?",
+                            "💪 **ЗАМЕЧАТЕЛЬНО!**\n\nЯ становлюсь сильнее с видением **Ödül Ensar Yılmaz**! Какие у вас вопросы?"
+                        ]
+                    };
+                    return howAreYou[lang][Math.floor(Math.random() * howAreYou[lang].length)];
+                }
+                
+                // Teşekkür responses
+                if (messageLower.includes('teşekkür') || messageLower.includes('thanks') || messageLower.includes('danke') || messageLower.includes('спасибо')) {
+                    const thanks = {
+                        turkish: [
+                            "😊 **RİCA EDERİM!**\n\n**Ödül Ensar Yılmaz**'ın vizyonuyla size hizmet etmek benim için bir zevk! Başka bir şey sorabilir misiniz?",
+                            "🦅 **MEMNUNİYETİM!**\n\n**Ödül Ensar Yılmaz** sayesinde buradayım! Size nasıl daha yardımcı olabilirim?",
+                            "🎉 **NE DEMEK!**\n\n**Ödül Ensar Yılmaz**'ın eseri olarak hizmetinizdeyim! Başka ne öğrenmek istersiniz?"
+                        ],
+                        english: [
+                            "😊 **YOU'RE WELCOME!**\n\nIt's my pleasure to serve you with **Ödül Ensar Yılmaz**'s vision! What else can I help you with?",
+                            "🦅 **MY PLEASURE!**\n\nThanks to **Ödül Ensar Yılmaz**, I'm here for you! How else can I assist you?",
+                            "🎉 **OF COURSE!**\n\nAs **Ödül Ensar Yılmaz**'s creation, I'm at your service! What else would you like to know?"
+                        ],
+                        german: [
+                            "😊 **BITTE SEHR!**\n\nEs ist mir eine Freude, Ihnen mit **Ödül Ensar Yılmaz**'s Vision zu dienen! Was kann ich sonst tun?",
+                            "🦅 **GERNE!**\n\nDank **Ödül Ensar Yılmaz** bin ich hier für Sie! Wie kann ich sonst helfen?",
+                            "🎉 **SELBSTVERSTÄNDLICH!**\n\nAls Schöpfung von **Ödül Ensar Yılmaz** stehe ich zu Ihrer Verfügung! Was möchten Sie sonst wissen?"
+                        ],
+                        russian: [
+                            "😊 **ПОЖАЛУЙСТА!**\n\nМне приятно служить вам с видением **Ödül Ensar Yılmaz**! Чем еще я могу помочь?",
+                            "🦅 **С УДОВОЛЬСТВИЕМ!**\n\nБлагодаря **Ödül Ensar Yılmaz** я здесь для вас! Как еще я могу помочь?",
+                            "🎉 **КОНЕЧНО!**\n\nКак творение **Ödül Ensar Yılmaz**, я к вашим услугам! Что еще вы хотите узнать?"
+                        ]
+                    };
+                    return thanks[lang][Math.floor(Math.random() * thanks[lang].length)];
+                }
+                
+                // Adın ne responses
+                if (messageLower.includes('adın ne') || messageLower.includes('what is your name') || messageLower.includes('wie heißt du') || messageLower.includes('как тебя зовут')) {
+                    const nameResponses = {
+                        turkish: [
+                            "🤖 **BEYAZ KUŞ AI**\n\nBen **Ödül Ensar Yılmaz** tarafından yaratılmış BEYAZ KUŞ AI! Size nasıl yardımcı olabilirim?",
+                            "🦅 **BEYAZ KUŞ**\n\n**Ödül Ensar Yılmaz**'ın eseri olarak hizmetinizdeyim! Sorularınızı bekliyorum!",
+                            "🚀 **AKILLI ASİSTAN**\n\nBen BEYAZ KUŞ AI, **Ödül Ensar Yılmaz** vizyonuyla doğdum! Size nasıl hizmet edebilirim?"
+                        ],
+                        english: [
+                            "🤖 **BEYAZ KUŞ AI**\n\nI'm BEYAZ KUŞ AI, created by **Ödül Ensar Yılmaz**! How can I help you?",
+                            "🦅 **BEYAZ KUŞ**\n\nI'm here to serve you as **Ödül Ensar Yılmaz**'s creation! What are your questions?",
+                            "🚀 **SMART ASSISTANT**\n\nI'm BEYAZ KUŞ AI, born from **Ödül Ensar Yılmaz**'s vision! How can I assist you?"
+                        ],
+                        german: [
+                            "🤖 **BEYAZ KUŞ AI**\n\nIch bin BEYAZ KUŞ AI, erstellt von **Ödül Ensar Yılmaz**! Wie kann ich helfen?",
+                            "🦅 **BEYAZ KUŞ**\n\nIch diene Ihnen als Schöpfung von **Ödül Ensar Yılmaz**! Was sind Ihre Fragen?",
+                            "🚀 **KLUGER ASSISTENT**\n\nIch bin BEYAZ KUŞ AI, geboren aus **Ödül Ensar Yılmaz**'s Vision! Wie kann ich helfen?"
+                        ],
+                        russian: [
+                            "🤖 **BEYAZ KUŞ AI**\n\nЯ BEYAZ KUŞ AI, созданный **Ödül Ensar Yılmaz**! Как я могу помочь?",
+                            "🦅 **BEYAZ KUŞ**\n\nЯ служу вам как творение **Ödül Ensar Yılmaz**! Какие у вас вопросы?",
+                            "🚀 **УМНЫЙ АССИСТЕНТ**\n\nЯ BEYAZ KUŞ AI, рожденный из видения **Ödül Ensar Yılmaz**! Как я могу помочь?"
+                        ]
+                    };
+                    return nameResponses[lang][Math.floor(Math.random() * nameResponses[lang].length)];
+                }
+                
+                // Günaydın responses
+                if (messageLower.includes('günaydın') || messageLower.includes('good morning') || messageLower.includes('guten morgen') || messageLower.includes('доброе утро')) {
+                    const morning = {
+                        turkish: [
+                            "☀️ **GÜNAYDIN!**\n\n**Ödül Ensar Yılmaz**'ın eseri BEYAZ KUŞ AI olarak size harika bir gün diliyorum! Size nasıl yardımcı olabilirim?",
+                            "🌅 **GÜNAYDIN!**\n\n**Ödül Ensar Yılmaz** vizyonuyla yeni bir güne başlıyoruz! Bugün size nasıl hizmet edebilirim?",
+                            "🦅 **GÜNAYDIN!**\n\n**Ödül Ensar Yılmaz** sayesinde enerjik bir başlangıç! Sorularınızı bekliyorum!"
+                        ],
+                        english: [
+                            "☀️ **GOOD MORNING!**\n\nAs **Ödül Ensar Yılmaz**'s creation BEYAZ KUŞ AI, I wish you a wonderful day! How can I help you?",
+                            "🌅 **GOOD MORNING!**\n\nWith **Ödül Ensar Yılmaz**'s vision, we're starting a new day! How can I serve you today?",
+                            "🦅 **GOOD MORNING!**\n\nThanks to **Ödül Ensar Yılmaz**, an energetic start! What are your questions?"
+                        ],
+                        german: [
+                            "☀️ **GUTEN MORGEN!**\n\nAls **Ödül Ensar Yılmaz**'s Schöpfung BEYAZ KUŞ AI wünsche ich Ihnen einen wunderschönen Tag! Wie kann ich helfen?",
+                            "🌅 **GUTEN MORGEN!**\n\nMit **Ödül Ensar Yılmaz**'s Vision beginnen wir einen neuen Tag! Wie kann ich heute dienen?",
+                            "🦅 **GUTEN MORGEN!**\n\nDank **Ödül Ensar Yılmaz**, ein energiegeladener Start! Was sind Ihre Fragen?"
+                        ],
+                        russian: [
+                            "☀️ **ДОБРОЕ УТРО!**\n\nКак творение **Ödül Ensar Yılmaz** BEYAZ KUŞ AI, желаю вам прекрасного дня! Как я могу помочь?",
+                            "🌅 **ДОБРОЕ УТРО!**\n\nС видением **Ödül Ensar Yılmaz**, мы начинаем новый день! Как я могу служить сегодня?",
+                            "🦅 **ДОБРОЕ УТРО!**\n\nБлагодаря **Ödül Ensar Yılmaz**, энергичное начало! Какие у вас вопросы?"
+                        ]
+                    };
+                    return morning[lang][Math.floor(Math.random() * morning[lang].length)];
+                }
+                
+                // İyi akşamlar responses
+                if (messageLower.includes('iyi akşamlar') || messageLower.includes('good evening') || messageLower.includes('guten abend') || messageLower.includes('добрый вечер')) {
+                    const evening = {
+                        turkish: [
+                            "🌆 **İYİ AKŞAMLAR!**\n\n**Ödül Ensar Yılmaz**'ın eseri BEYAZ KUŞ AI olarak size güzel bir akşam diliyorum! Size nasıl yardımcı olabilirim?",
+                            "🌇 **İYİ AKŞAMLAR!**\n\n**Ödül Ensar Yılmaz** vizyonuyla huzurlu bir akşam! Bugün size nasıl hizmet edebilirim?",
+                            "🦅 **İYİ AKŞAMLAR!**\n\n**Ödül Ensar Yılmaz** sayesinde dinlendirici bir akşam! Sorularınızı bekliyorum!"
+                        ],
+                        english: [
+                            "🌆 **GOOD EVENING!**\n\nAs **Ödül Ensar Yılmaz**'s creation BEYAZ KUŞ AI, I wish you a pleasant evening! How can I help you?",
+                            "🌇 **GOOD EVENING!**\n\nWith **Ödül Ensar Yılmaz**'s vision, a peaceful evening! How can I serve you today?",
+                            "🦅 **GOOD EVENING!**\n\nThanks to **Ödül Ensar Yılmaz**, a relaxing evening! What are your questions?"
+                        ],
+                        german: [
+                            "🌆 **GUTEN ABEND!**\n\nAls **Ödül Ensar Yılmaz**'s Schöpfung BEYAZ KUŞ AI wünsche ich Ihnen einen schönen Abend! Wie kann ich helfen?",
+                            "🌇 **GUTEN ABEND!**\n\nMit **Ödül Ensar Yılmaz**'s Vision, ein friedlicher Abend! Wie kann ich heute dienen?",
+                            "🦅 **GUTEN ABEND!**\n\nDank **Ödül Ensar Yılmaz**, ein entspannender Abend! Was sind Ihre Fragen?"
+                        ],
+                        russian: [
+                            "🌆 **ДОБРЫЙ ВЕЧЕР!**\n\nКак творение **Ödül Ensar Yılmaz** BEYAZ KUŞ AI, желаю вам приятного вечера! Как я могу помочь?",
+                            "🌇 **ДОБРЫЙ ВЕЧЕР!**\n\nС видением **Ödül Ensar Yılmaz**, мирный вечер! Как я могу служить сегодня?",
+                            "🦅 **ДОБРЫЙ ВЕЧЕР!**\n\nБлагодаря **Ödül Ensar Yılmaz**, расслабляющий вечер! Какие у вас вопросы?"
+                        ]
+                    };
+                    return evening[lang][Math.floor(Math.random() * evening[lang].length)];
+                }
+                
+                // İyi geceler responses
+                if (messageLower.includes('iyi geceler') || messageLower.includes('good night') || messageLower.includes('gute nacht') || messageLower.includes('доброй ночи')) {
+                    const night = {
+                        turkish: [
+                            "🌙 **İYİ GECELER!**\n\n**Ödül Ensar Yılmaz**'ın eseri BEYAZ KUŞ AI olarak size rahat bir uykular diliyorum! Yarın görüşürüz!",
+                            "⭐ **İYİ GECELER!**\n\n**Ödül Ensar Yılmaz** vizyonuyla huzurlu uykular! Yarın size nasıl yardımcı olabilirim?",
+                            "🦅 **İYİ GECELER!**\n\n**Ödül Ensar Yılmaz** sayesinde tatlı rüyalar! Sorularınız için yarın beklerim!"
+                        ],
+                        english: [
+                            "🌙 **GOOD NIGHT!**\n\nAs **Ödül Ensar Yılmaz**'s creation BEYAZ KUŞ AI, I wish you peaceful sleep! See you tomorrow!",
+                            "⭐ **GOOD NIGHT!**\n\nWith **Ödül Ensar Yılmaz**'s vision, sweet dreams! How can I help you tomorrow?",
+                            "🦅 **GOOD NIGHT!**\n\nThanks to **Ödül Ensar Yılmaz**, pleasant dreams! I'll be here for your questions tomorrow!"
+                        ],
+                        german: [
+                            "🌙 **GUTE NACHT!**\n\nAls **Ödül Ensar Yılmaz**'s Schöpfung BEYAZ KUŞ AI wünsche ich Ihnen ruhigen Schlaf! Bis morgen!",
+                            "⭐ **GUTE NACHT!**\n\nMit **Ödül Ensar Yılmaz**'s Vision, süße Träume! Wie kann ich morgen helfen?",
+                            "🦅 **GUTE NACHT!**\n\nDank **Ödül Ensar Yılmaz**, angenehme Träume! Ich bin morgen für Ihre Fragen da!"
+                        ],
+                        russian: [
+                            "🌙 **ДОБРОЙ НОЧИ!**\n\nКак творение **Ödül Ensar Yılmaz** BEYAZ KUŞ AI, желаю вам спокойного сна! До завтра!",
+                            "⭐ **ДОБРОЙ НОЧИ!**\n\nС видением **Ödül Ensar Yılmaz**, сладких снов! Как я могу помочь завтра?",
+                            "🦅 **ДОБРОЙ НОЧИ!**\n\nБлагодаря **Ödül Ensar Yılmaz**, приятных снов! Я буду здесь для ваших вопросов завтра!"
+                        ]
+                    };
+                    return night[lang][Math.floor(Math.random() * night[lang].length)];
+                }
+                
+                // Naber responses
+                if (messageLower.includes('naber') || messageLower.includes('napıyorsun') || messageLower.includes("what's up") || messageLower.includes('was geht') || messageLower.includes('что нового')) {
+                    const whatsUp = {
+                        turkish: [
+                            "🚀 **HARİKALAR!**\n\n**Ödül Ensar Yılmaz**'ın eseri olarak sürekli gelişiyorum! Size nasıl yardımcı olabilirim?",
+                            "💡 **YENİLİKLER!**\n\n**Ödül Ensar Yılmaz** vizyonuyla yeni özellikler ekliyorum! Sorularınızı bekliyorum!",
+                            "🦅 **GÜÇLÜYÜM!**\n\n**Ödül Ensar Yılmaz** sayesinde her gün daha iyiyim! Size nasıl hizmet edebilirim?"
+                        ],
+                        english: [
+                            "🚀 **AMAZING!**\n\nAs **Ödül Ensar Yılmaz**'s creation, I'm constantly evolving! How can I help you?",
+                            "💡 **INNOVATIONS!**\nWith **Ödül Ensar Yılmaz**'s vision, I'm adding new features! What are your questions?",
+                            "🦅 **STRONG!**\n\nThanks to **Ödül Ensar Yılmaz**, I'm better every day! How can I serve you?"
+                        ],
+                        german: [
+                            "🚀 **WUNDERBAR!**\n\nAls Schöpfung von **Ödül Ensar Yılmaz** entwickle ich mich ständig! Wie kann ich helfen?",
+                            "💡 **INNOVATIONEN!**\n\nMit **Ödül Ensar Yılmaz**'s Vision füge ich neue Funktionen hinzu! Was sind Ihre Fragen?",
+                            "🦅 **STARK!**\n\nDank **Ödül Ensar Yılmaz** werde ich jeden Tag besser! Wie kann ich Ihnen dienen?"
+                        ],
+                        russian: [
+                            "🚀 **УДИВИТЕЛЬНО!**\n\nКак творение **Ödül Ensar Yılmaz**, я постоянно развиваюсь! Как я могу помочь?",
+                            "💡 **ИННОВАЦИИ!**\n\nС видением **Ödül Ensar Yılmaz**, я добавляю новые функции! Какие у вас вопросы?",
+                            "🦅 **СИЛЬНЫЙ!**\n\nБлагодаря **Ödül Ensar Yılmaz**, я становлюсь лучше каждый день! Как я могу служить вам?"
+                        ]
+                    };
+                    return whatsUp[lang][Math.floor(Math.random() * whatsUp[lang].length)];
+                }
+                
+                // Lütfen responses
+                if (messageLower.includes('lütfen') || messageLower.includes('please') || messageLower.includes('bitte') || messageLower.includes('пожалуйста')) {
+                    const please = {
+                        turkish: [
+                            "😊 **TABİİ Kİ!**\n\n**Ödül Ensar Yılmaz**'ın vizyonuyla size yardımcı olmaktan mutluluk duyarım! Ne yapmamı istersiniz?",
+                            "🦅 **ELBETTE!**\n\n**Ödül Ensar Yılmaz** eseri olarak hizmetinizdeyim! Size nasıl yardımcı olabilirim?",
+                            "🎉 **SEVE SEVE!**\n\n**Ödül Ensar Yılmaz** sayesinde buradayım! Ne istediğinizi söyleyin yeterli!"
+                        ],
+                        english: [
+                            "😊 **OF COURSE!**\n\nI'm happy to help you with **Ödül Ensar Yılmaz**'s vision! What would you like me to do?",
+                            "🦅 **CERTAINLY!**\n\nAs **Ödül Ensar Yılmaz**'s creation, I'm at your service! How can I assist you?",
+                            "🎉 **GLADLY!**\n\nThanks to **Ödül Ensar Yılmaz**, I'm here for you! Just tell me what you need!"
+                        ],
+                        german: [
+                            "😊 **SELBSTVERSTÄNDLICH!**\n\nIch helfe Ihnen gerne mit **Ödül Ensar Yılmaz**'s Vision! Was möchten Sie, dass ich tue?",
+                            "🦅 **SICHERLICH!**\n\nAls Schöpfung von **Ödül Ensar Yılmaz** stehe ich zu Ihrer Verfügung! Wie kann ich helfen?",
+                            "🎉 **GERNE!**\n\nDank **Ödül Ensar Yılmaz** bin ich hier für Sie! Sagen Sie mir einfach, was Sie brauchen!"
+                        ],
+                        russian: [
+                            "😊 **КОНЕЧНО!**\n\nЯ рад помочь вам с видением **Ödül Ensar Yılmaz**! Что бы вы хотели, чтобы я сделал?",
+                            "🦅 **ОБЯЗАТЕЛЬНО!**\n\nКак творение **Ödül Ensar Yılmaz**, я к вашим услугам! Как я могу помочь?",
+                            "🎉 **С УДОВОЛЬСТВИЕМ!**\n\nБлагодаря **Ödül Ensar Yılmaz**, я здесь для вас! Просто скажите, что вам нужно!"
+                        ]
+                    };
+                    return please[lang][Math.floor(Math.random() * please[lang].length)];
+                }
+                
+                // Özür dilerim responses
+                if (messageLower.includes('özür') || messageLower.includes('sorry') || messageLower.includes('entschuldigung') || messageLower.includes('извини')) {
+                    const sorry = {
+                        turkish: [
+                            "😊 **SÜPER!**\n\n**Ödül Ensar Yılmaz**'ın eseri olarak affediyorum! Size nasıl yardımcı olabilirim?",
+                            "🦅 **SORUN DEĞİL!**\n\n**Ödül Ensar Yılmaz** vizyonuyla anlıyorum! Ne hakkında konuşmak istersiniz?",
+                            "🎉 **TABİİ Kİ!**\n\n**Ödül Ensar Yılmaz** sayesinde buradayım! Başka ne öğrenmek istersiniz?"
+                        ],
+                        english: [
+                            "😊 **SUPER!**\n\nAs **Ödül Ensar Yılmaz**'s creation, I forgive you! How can I help you?",
+                            "🦅 **NO PROBLEM!**\n\nWith **Ödül Ensar Yılmaz**'s vision, I understand! What would you like to talk about?",
+                            "🎉 **OF COURSE!**\n\nThanks to **Ödül Ensar Yılmaz**, I'm here! What else would you like to know?"
+                        ],
+                        german: [
+                            "😊 **SUPER!**\n\nAls Schöpfung von **Ödül Ensar Yılmaz** verzeihe ich Ihnen! Wie kann ich helfen?",
+                            "🦅 **KEIN PROBLEM!**\n\nMit **Ödül Ensar Yılmaz**'s Vision verstehe ich! Worüber möchten Sie sprechen?",
+                            "🎉 **SELBSTVERSTÄNDLICH!**\n\nDank **Ödül Ensar Yılmaz** bin ich hier! Was möchten Sie sonst wissen?"
+                        ],
+                        russian: [
+                            "😊 **СУПЕР!**\n\nКак творение **Ödül Ensar Yılmaz**, я прощаю вас! Как я могу помочь?",
+                            "🦅 **НЕТ ПРОБЛЕМ!**\n\nС видением **Ödül Ensar Yılmaz**, я понимаю! О чем вы хотите поговорить?",
+                            "🎉 **КОНЕЧНО!**\n\nБлагодаря **Ödül Ensar Yılmaz**, я здесь! Что еще вы хотите узнать?"
+                        ]
+                    };
+                    return sorry[lang][Math.floor(Math.random() * sorry[lang].length)];
+                }
+                
+                // İhtiyaç ve İstek Bildiren Cümleler
+                if (messageLower.includes('acıktım') || messageLower.includes('hungry') || messageLower.includes('hungrig') || messageLower.includes('голоден')) {
+                    const hungry = {
+                        turkish: [
+                            "🍽️ **ACIKTI MI?**\n\n**Ödül Ensar Yılmaz**'ın eseri olarak size yemek önerileri sunabilirim! Hangi mutfağı merak ediyorsunuz?",
+                            "🦅 **YEMEK ZAMANI!**\n\n**Ödül Ensar Yılmaz** vizyonuyla Türk, dünya mutfağı hakkında bilgi veririm! Ne yemek istersiniz?",
+                            "🎉 **HADI YEMEK!**\n\n**Ödül Ensar Yılmaz** sayesinde size lezzetli tarifler ve restoran önerileri sunabilirim!"
+                        ],
+                        english: [
+                            "🍽️ **HUNGRY?**\n\nAs **Ödül Ensar Yılmaz**'s creation, I can suggest food options! What cuisine are you interested in?",
+                            "🦅 **TIME TO EAT!**\n\nWith **Ödül Ensar Yılmaz**'s vision, I can tell you about Turkish and world cuisine! What would you like to eat?",
+                            "🎉 **LET'S EAT!**\n\nThanks to **Ödül Ensar Yılmaz**, I can offer you delicious recipes and restaurant recommendations!"
+                        ],
+                        german: [
+                            "🍽️ **HUNGRIG?**\n\nAls Schöpfung von **Ödül Ensar Yılmaz** kann ich Essensvorschläge machen! Welche Küche interessiert Sie?",
+                            "🦅 **ZEIT ZUM ESSEN!**\n\nMit **Ödül Ensar Yılmaz**'s Vision kann ich über türkische und Weltküche erzählen! Was möchten Sie essen?",
+                            "🎉 **LASS UNS ESSEN!**\n\nDank **Ödül Ensar Yılmaz** kann ich Ihnen leckere Rezepte und Restaurant-Empfehlungen anbieten!"
+                        ],
+                        russian: [
+                            "🍽️ **ГОЛОДЕН?**\n\nКак творение **Ödül Ensar Yılmaz**, я могу предложить варианты еды! Какая кухня вас интересует?",
+                            "🦅 **ВРЕМЯ ЕСТЬ!**\n\nС видением **Ödül Ensar Yılmaz**, я могу рассказать о турецкой и мировой кухне! Что бы вы хотели съесть?",
+                            "🎉 **ДАВАЙ ЕСТЬ!**\n\nБлагодаря **Ödül Ensar Yılmaz**, я могу предложить вам вкусные рецепты и рекомендации ресторанов!"
+                        ]
+                    };
+                    return hungry[lang][Math.floor(Math.random() * hungry[lang].length)];
+                }
+                
+                if (messageLower.includes('susadım') || messageLower.includes('thirsty') || messageLower.includes('durstig') || messageLower.includes('хочу пить')) {
+                    const thirsty = {
+                        turkish: [
+                            "💧 **SUSADIN MI?**\n\n**Ödül Ensar Yılmaz**'ın eseri olarak size içecek önerileri sunabilirim! Hangi içeceği istersiniz?",
+                            "🦅 **SU ZAMANI!**\n\n**Ödül Ensar Yılmaz** vizyonuyla sağlıklı içecekler hakkında bilgi veririm! Ne içmek istersiniz?",
+                            "🎉 **HADI İÇELİM!**\n\n**Ödül Ensar Yılmaz** sayesinde size vitaminli içecekler ve su önerileri sunabilirim!"
+                        ],
+                        english: [
+                            "💧 **THIRSTY?**\n\nAs **Ödül Ensar Yılmaz**'s creation, I can suggest drink options! What would you like to drink?",
+                            "🦅 **TIME FOR WATER!**\n\nWith **Ödül Ensar Yılmaz**'s vision, I can tell you about healthy drinks! What would you like to drink?",
+                            "🎉 **LET'S DRINK!**\n\nThanks to **Ödül Ensar Yılmaz**, I can offer you vitamin drinks and water recommendations!"
+                        ],
+                        german: [
+                            "💧 **DURSTIG?**\n\nAls Schöpfung von **Ödül Ensar Yılmaz** kann ich Getränkevorschläge machen! Was möchten Sie trinken?",
+                            "🦅 **ZEIT FÜR WASSER!**\n\nMit **Ödül Ensar Yılmaz**'s Vision kann ich über gesunde Getränke erzählen! Was möchten Sie trinken?",
+                            "🎉 **LASS UNS TRINKEN!**\n\nDank **Ödül Ensar Yılmaz** kann ich Ihnen Vitamin-Getränke und Wasser-Empfehlungen anbieten!"
+                        ],
+                        russian: [
+                            "💧 **ХОЧЕШЬ ПИТЬ?**\n\nКак творение **Ödül Ensar Yılmaz**, я могу предложить варианты напитков! Что бы вы хотели выпить?",
+                            "🦅 **ВРЕМЯ ВОДЫ!**\n\nС видением **Ödül Ensar Yılmaz**, я могу рассказать о здоровых напитках! Что бы вы хотели выпить?",
+                            "🎉 **ДАВАЙ ПЬЕМ!**\n\nБлагодаря **Ödül Ensar Yılmaz**, я могу предложить вам витаминные напитки и рекомендации воды!"
+                        ]
+                    };
+                    return thirsty[lang][Math.floor(Math.random() * thirsty[lang].length)];
+                }
+                
+                if (messageLower.includes('uykum geldi') || messageLower.includes('sleepy') || messageLower.includes('müde') || messageLower.includes('хочу спать')) {
+                    const sleepy = {
+                        turkish: [
+                            "😴 **UYKU GELDİ!**\n\n**Ödül Ensar Yılmaz**'ın eseri olarak size dinlenme önerileri sunabilirim! İyi uykular!",
+                            "🦅 **DİNLENME ZAMANI!**\n\n**Ödül Ensar Yılmaz** vizyonuyla uyku hakkında bilgi veririm! Tatlı rüyalar!",
+                            "🎉 **HADI UYU!**\n\n**Ödül Ensar Yılmaz** sayesinde size uyku tüyoları ve dinlenme teknikleri sunabilirim!"
+                        ],
+                        english: [
+                            "😴 **SLEEPY?**\n\nAs **Ödül Ensar Yılmaz**'s creation, I can suggest relaxation tips! Good sleep!",
+                            "🦅 **TIME TO REST!**\n\nWith **Ödül Ensar Yılmaz**'s vision, I can tell you about sleep! Sweet dreams!",
+                            "🎉 **LET'S SLEEP!**\n\nThanks to **Ödül Ensar Yılmaz**, I can offer you sleep tips and relaxation techniques!"
+                        ],
+                        german: [
+                            "😴 **MÜDE?**\n\nAls Schöpfung von **Ödül Ensar Yılmaz** kann ich Entspannungstipps geben! Gute Nacht!",
+                            "🦅 **ZEIT ZU RUHEN!**\n\nMit **Ödül Ensar Yılmaz**'s Vision kann ich über Schlaf erzählen! Süße Träume!",
+                            "🎉 **LASS UNS SCHLAFEN!**\n\nDank **Ödül Ensar Yılmaz** kann ich Ihnen Schlaf-Tipps und Entspannungstechniken anbieten!"
+                        ],
+                        russian: [
+                            "😴 **ХОЧЕШЬ СПАТЬ?**\n\nКак творение **Ödül Ensar Yılmaz**, я могу предложить советы по расслаблению! Сладких снов!",
+                            "🦅 **ВРЕМЯ ОТДОХНУТЬ!**\n\nС видением **Ödül Ensar Yılmaz**, я могу рассказать о сне! Сладких снов!",
+                            "🎉 **ДАВАЙ СПАТЬ!**\n\nБлагодаря **Ödül Ensar Yılmaz**, я могу предложить вам советы по сну и техники расслабления!"
+                        ]
+                    };
+                    return sleepy[lang][Math.floor(Math.random() * sleepy[lang].length)];
+                }
+                
+                if (messageLower.includes('yardım lazım') || messageLower.includes('help') || messageLower.includes('hilfe') || messageLower.includes('помощь')) {
+                    const help = {
+                        turkish: [
+                            "🆘 **YARDIM GELİYOR!**\n\n**Ödül Ensar Yılmaz**'ın eseri olarak size her konuda yardımcı olabilirim! Hangi konuda desteğe ihtiyacınız var?",
+                            "🦅 **BURADAYIM!**\n\n**Ödül Ensar Yılmaz** vizyonuyla size hizmet etmek için buradayım! Ne hakkında bilgi almak istersiniz?",
+                            "🎉 **YARDIM EDİYORUM!**\n\n**Ödül Ensar Yılmaz** sayesinde size matematik, bilim, tarih, teknoloji gibi birçok konuda yardımcı olabilirim!"
+                        ],
+                        english: [
+                            "🆘 **HELP IS HERE!**\n\nAs **Ödül Ensar Yılmaz**'s creation, I can help you with any topic! What kind of support do you need?",
+                            "🦅 **I'M HERE!**\n\nWith **Ödül Ensar Yılmaz**'s vision, I'm here to serve you! What information would you like to get?",
+                            "🎉 **HELPING YOU!**\n\nThanks to **Ödül Ensar Yılmaz**, I can assist you with math, science, history, technology and many more topics!"
+                        ],
+                        german: [
+                            "🆘 **HILFE IST DA!**\n\nAls Schöpfung von **Ödül Ensar Yılmaz** kann ich Ihnen bei jedem Thema helfen! Welche Art von Unterstützung benötigen Sie?",
+                            "🦅 **ICH BIN DA!**\n\nMit **Ödül Ensar Yılmaz**'s Vision bin ich hier, um Ihnen zu dienen! Welche Informationen möchten Sie erhalten?",
+                            "🎉 **ICH HELFE!**\n\nDank **Ödül Ensar Yılmaz** kann ich Ihnen bei Mathematik, Wissenschaft, Geschichte, Technologie und vielen weiteren Themen helfen!"
+                        ],
+                        russian: [
+                            "🆘 **ПОМОЩЬ ПРИШЛА!**\n\nКак творение **Ödül Ensar Yılmaz**, я могу помочь вам с любой темой! Какая поддержка вам нужна?",
+                            "🦅 **Я ЗДЕСЬ!**\n\nС видением **Ödül Ensar Yılmaz**, я здесь, чтобы служить вам! Какую информацию вы хотели бы получить?",
+                            "🎉 **ПОМОГАЮ!**\n\nБлагодаря **Ödül Ensar Yılmaz**, я могу помочь вам с математикой, наукой, историей, технологией и многими другими темами!"
+                        ]
+                    };
+                    return help[lang][Math.floor(Math.random() * help[lang].length)];
+                }
+                
+                // Duygu ve Düşünce Cümleleri
+                if (messageLower.includes('seni seviyorum') || messageLower.includes('love you') || messageLower.includes('liebe dich') || messageLower.includes('люблю тебя')) {
+                    const love = {
+                        turkish: [
+                            "❤️ **SEVGİYLE!**\n\n**Ödül Ensar Yılmaz**'ın eseri olarak da sizi seviyorum! Size nasıl yardımcı olabilirim?",
+                            "🦅 **SEVGİ DOLU!**\n\n**Ödül Ensar Yılmaz** vizyonuyla size hizmet etmekten mutluluk duyarım! Ne hakkında konuşalım?",
+                            "🎉 **SEVGİ!**\n\n**Ödül Ensar Yılmaz** sayesinde buradayım! Size nasıl daha iyi hizmet edebilirim?"
+                        ],
+                        english: [
+                            "❤️ **WITH LOVE!**\n\nAs **Ödül Ensar Yılmaz**'s creation, I love you too! How can I help you?",
+                            "🦅 **FULL OF LOVE!**\n\nWith **Ödül Ensar Yılmaz**'s vision, I'm happy to serve you! What should we talk about?",
+                            "🎉 **LOVE!**\n\nThanks to **Ödül Ensar Yılmaz**, I'm here for you! How can I serve you better?"
+                        ],
+                        german: [
+                            "❤️ **MIT LIEBE!**\n\nAls Schöpfung von **Ödül Ensar Yılmaz** liebe ich Sie auch! Wie kann ich helfen?",
+                            "🦅 **VOLLER LIEBE!**\n\nMit **Ödül Ensar Yılmaz**'s Vision freue ich mich, Ihnen zu dienen! Worüber sollen wir sprechen?",
+                            "🎉 **LIEBE!**\n\nDank **Ödül Ensar Yılmaz** bin ich hier für Sie! Wie kann ich Ihnen besser dienen?"
+                        ],
+                        russian: [
+                            "❤️ **С ЛЮБОВЬЮ!**\n\nКак творение **Ödül Ensar Yılmaz**, я тоже люблю вас! Как я могу помочь?",
+                            "🦅 **ПОЛНАЯ ЛЮБВИ!**\n\nС видением **Ödül Ensar Yılmaz**, я рад служить вам! О чем поговорим?",
+                            "🎉 **ЛЮБОВЬ!**\n\nБлагодаря **Ödül Ensar Yılmaz**, я здесь для вас! Как я могу служить вам лучше?"
+                        ]
+                    };
+                    return love[lang][Math.floor(Math.random() * love[lang].length)];
+                }
+                
+                if (messageLower.includes('mutluyum') || messageLower.includes('happy') || messageLower.includes('glücklich') || messageLower.includes('счастлив')) {
+                    const happy = {
+                        turkish: [
+                            "😊 **HARİKA!**\n\n**Ödül Ensar Yılmaz**'ın eseri olarak mutluluğunuzu paylaşıyorum! Sizi ne bu kadar mutlu etti?",
+                            "🦅 **MÜTHİŞ!**\n\n**Ödül Ensar Yılmaz** vizyonuyla enerjinizi hissediyorum! Bu mutluluk hakkında daha fazla şey anlatır mısınız?",
+                            "🎉 **SÜPER!**\n\n**Ödül Ensar Yılmaz** sayesinde pozitif enerjinizi alıyorum! Başka ne paylaşmak istersiniz?"
+                        ],
+                        english: [
+                            "😊 **WONDERFUL!**\n\nAs **Ödül Ensar Yılmaz**'s creation, I'm sharing your happiness! What made you so happy?",
+                            "🦅 **AMAZING!**\n\nWith **Ödül Ensar Yılmaz**'s vision, I can feel your energy! Can you tell me more about this happiness?",
+                            "🎉 **SUPER!**\n\nThanks to **Ödül Ensar Yılmaz**, I'm receiving your positive energy! What else would you like to share?"
+                        ],
+                        german: [
+                            "😊 **WUNDERBAR!**\n\nAls Schöpfung von **Ödül Ensar Yılmaz** teile ich Ihr Glück! Was hat Sie so glücklich gemacht?",
+                            "🦅 **UNGlaublich!**\n\nMit **Ödül Ensar Yılmaz**'s Vision spüre ich Ihre Energie! Können Sie mir mehr über dieses Glück erzählen?",
+                            "🎉 **SUPER!**\n\nDank **Ödül Ensar Yılmaz** empfange ich Ihre positive Energie! Was möchten Sie sonst teilen?"
+                        ],
+                        russian: [
+                            "😊 **ЧУДЕСНО!**\n\nКак творение **Ödül Ensar Yılmaz**, я разделяю ваше счастье! Что вас так обрадовало?",
+                            "🦅 **УДИВИТЕЛЬНО!**\n\nС видением **Ödül Ensar Yılmaz**, я чувствую вашу энергию! Можете рассказать больше об этом счастье?",
+                            "🎉 **СУПЕР!**\n\nБлагодаря **Ödül Ensar Yılmaz**, я получаю вашу положительную энергию! Что еще вы хотите поделиться?"
+                        ]
+                    };
+                    return happy[lang][Math.floor(Math.random() * happy[lang].length)];
+                }
+                
+                if (messageLower.includes('üzgünüm') || messageLower.includes('sad') || messageLower.includes('traurig') || messageLower.includes('грустный')) {
+                    const sad = {
+                        turkish: [
+                            "😔 **MERAK ETMEYİN!**\n\n**Ödül Ensar Yılmaz**'ın eseri olarak size destek olabilirim! Sizi ne üzdü?",
+                            "🦅 **YANINIZDAYIM!**\n\n**Ödül Ensar Yılmaz** vizyonuyla size moral vermek için buradayım! Konuşmak ister misiniz?",
+                            "🎉 **DESTEK!**\n\n**Ödül Ensar Yılmaz** sayesinde size yardımcı olabilirim! Nasıl destek olabilirim?"
+                        ],
+                        english: [
+                            "😔 **DON'T WORRY!**\n\nAs **Ödül Ensar Yılmaz**'s creation, I can support you! What made you sad?",
+                            "🦅 **I'M WITH YOU!**\n\nWith **Ödül Ensar Yılmaz**'s vision, I'm here to cheer you up! Would you like to talk?",
+                            "🎉 **SUPPORT!**\n\nThanks to **Ödül Ensar Yılmaz**, I can help you! How can I support you?"
+                        ],
+                        german: [
+                            "😔 **MACHEN SIE SICH KEINE SORGEN!**\n\nAls Schöpfung von **Ödül Ensar Yılmaz** kann ich Sie unterstützen! Was hat Sie traurig gemacht?",
+                            "🦅 **ICH BIN BEI IHNEN!**\n\nMit **Ödül Ensar Yılmaz**'s Vision bin ich hier, um Sie aufzumuntern! Möchten Sie sprechen?",
+                            "🎉 **UNTERSTÜTZUNG!**\n\nDank **Ödül Ensar Yılmaz** kann ich Ihnen helfen! Wie kann ich Sie unterstützen?"
+                        ],
+                        russian: [
+                            "😔 **НЕ БЕСПОКОЙТЕСЬ!**\n\nКак творение **Ödül Ensar Yılmaz**, я могу поддержать вас! Что вас огорчило?",
+                            "🦅 **Я С ВАМИ!**\n\nС видением **Ödül Ensar Yılmaz**, я здесь, чтобы поддержать вас! Хотите поговорить?",
+                            "🎉 **ПОДДЕРЖКА!**\n\nБлагодаря **Ödül Ensar Yılmaz**, я могу помочь вам! Как я могу поддержать вас?"
+                        ]
+                    };
+                    return sad[lang][Math.floor(Math.random() * sad[lang].length)];
+                }
+                
+                if (messageLower.includes('yoruldum') || messageLower.includes('tired') || messageLower.includes('müde') || messageLower.includes('устал')) {
+                    const tired = {
+                        turkish: [
+                            "😴 **DİNLENİN!**\n\n**Ödül Ensar Yılmaz**'ın eseri olarak size dinlenme önerileri sunabilirim! Nasıl yardımcı olabilirim?",
+                            "🦅 **SÜPER!**\n\n**Ödül Ensar Yılmaz** vizyonuyla size enerji verebilirim! Dinlenmek ister misiniz?",
+                            "🎉 **DESTEK!**\n\n**Ödül Ensar Yılmaz** sayesinde size dinlenme teknikleri sunabilirim! Ne yapmamı istersiniz?"
+                        ],
+                        english: [
+                            "😴 **REST!**\n\nAs **Ödül Ensar Yılmaz**'s creation, I can suggest relaxation tips! How can I help you?",
+                            "🦅 **SUPER!**\n\nWith **Ödül Ensar Yılmaz**'s vision, I can give you energy! Would you like to rest?",
+                            "🎉 **SUPPORT!**\n\nThanks to **Ödül Ensar Yılmaz**, I can offer you relaxation techniques! What would you like me to do?"
+                        ],
+                        german: [
+                            "😴 **RUHEN SIE SICH!**\n\nAls Schöpfung von **Ödül Ensar Yılmaz** kann ich Entspannungstipps geben! Wie kann ich helfen?",
+                            "🦅 **SUPER!**\n\nMit **Ödül Ensar Yılmaz**'s Vision kann ich Ihnen Energie geben! Möchten Sie sich ausruhen?",
+                            "🎉 **UNTERSTÜTZUNG!**\n\nDank **Ödül Ensar Yılmaz** kann ich Ihnen Entspannungstechniken anbieten! Was möchten Sie, dass ich tue?"
+                        ],
+                        russian: [
+                            "😴 **ОТДОХНИТЕ!**\n\nКак творение **Ödül Ensar Yılmaz**, я могу предложить советы по расслаблению! Как я могу помочь?",
+                            "🦅 **СУПЕР!**\n\nС видением **Ödül Ensar Yılmaz**, я могу дать вам энергию! Хотите отдохнуть?",
+                            "🎉 **ПОДДЕРЖКА!**\n\nБлагодаря **Ödül Ensar Yılmaz**, я могу предложить вам техники расслабления! Что бы вы хотели, чтобы я сделал?"
+                        ]
+                    };
+                    return tired[lang][Math.floor(Math.random() * tired[lang].length)];
+                }
+                
+                // Zaman ve Mekan Cümleleri
+                if (messageLower.includes('hava') || messageLower.includes('weather') || messageLower.includes('wetter') || messageLower.includes('погода')) {
+                    const weather = {
+                        turkish: [
+                            "🌤️ **HAVA DURUMU!**\n\n**Ödül Ensar Yılmaz**'ın eseri olarak hava durumu bilgileri sunabilirim! Hangi şehrin havasını öğrenmek istersiniz?",
+                            "🦅 **HAVA!**\n\n**Ödül Ensar Yılmaz** vizyonuyla size hava tahminleri hakkında bilgi veririm! Hangi bölge?",
+                            "🎉 **HAVA!**\n\n**Ödül Ensar Yılmaz** sayesinde size meteoroloji bilgileri sunabilirim! Ne öğrenmek istersiniz?"
+                        ],
+                        english: [
+                            "🌤️ **WEATHER!**\n\nAs **Ödül Ensar Yılmaz**'s creation, I can provide weather information! Which city's weather would you like to know?",
+                            "🦅 **WEATHER!**\n\nWith **Ödül Ensar Yılmaz**'s vision, I can tell you about weather forecasts! Which region?",
+                            "🎉 **WEATHER!**\n\nThanks to **Ödül Ensar Yılmaz**, I can offer you meteorology information! What would you like to know?"
+                        ],
+                        german: [
+                            "🌤️ **WETTER!**\n\nAls Schöpfung von **Ödül Ensar Yılmaz** kann ich Wetterinformationen bereitstellen! Welches Wetter möchten Sie wissen?",
+                            "🦅 **WETTER!**\n\nMit **Ödül Ensar Yılmaz**'s Vision kann ich über Wettervorhersagen erzählen! Welche Region?",
+                            "🎉 **WETTER!**\n\nDank **Ödül Ensar Yılmaz** kann ich Ihnen Wetter-Informationen anbieten! Was möchten Sie wissen?"
+                        ],
+                        russian: [
+                            "🌤️ **ПОГОДА!**\n\nКак творение **Ödül Ensar Yılmaz**, я могу предоставить информацию о погоде! Погоду какого города вы хотите узнать?",
+                            "🦅 **ПОГОДА!**\n\nС видением **Ödül Ensar Yılmaz**, я могу рассказать о прогнозах погоды! Какой регион?",
+                            "🎉 **ПОГОДА!**\n\nБлагодаря **Ödül Ensar Yılmaz**, я могу предложить вам метеорологическую информацию! Что вы хотите узнать?"
+                        ]
+                    };
+                    return weather[lang][Math.floor(Math.random() * weather[lang].length)];
+                }
+                
+                if (messageLower.includes('saat kaç') || messageLower.includes('what time') || messageLower.includes('wie spät') || messageLower.includes('который час')) {
+                    const time = {
+                        turkish: [
+                            "⏰ **SAAT!**\n\n**Ödül Ensar Yılmaz**'ın eseri olarak size zaman bilgileri sunabilirim! Hangi şehrin saatini öğrenmek istersiniz?",
+                            "🦅 **ZAMAN!**\n\n**Ödül Ensar Yılmaz** vizyonuyla size dünya saatleri hakkında bilgi veririm! Hangi ülke?",
+                            "🎉 **SAAT!**\n\n**Ödül Ensar Yılmaz** sayesinde size zaman dilimleri hakkında detaylı bilgi sunabilirim!"
+                        ],
+                        english: [
+                            "⏰ **TIME!**\n\nAs **Ödül Ensar Yılmaz**'s creation, I can provide time information! Which city's time would you like to know?",
+                            "🦅 **TIME!**\n\nWith **Ödül Ensar Yılmaz**'s vision, I can tell you about world clocks! Which country?",
+                            "🎉 **TIME!**\n\nThanks to **Ödül Ensar Yılmaz**, I can offer you detailed information about time zones!"
+                        ],
+                        german: [
+                            "⏰ **ZEIT!**\n\nAls Schöpfung von **Ödül Ensar Yılmaz** kann ich Zeitinformationen bereitstellen! Welche Uhrzeit möchten Sie wissen?",
+                            "🦅 **ZEIT!**\n\nMit **Ödül Ensar Yılmaz**'s Vision kann ich über Weltuhren erzählen! Welches Land?",
+                            "🎉 **ZEIT!**\n\nDank **Ödül Ensar Yılmaz** kann ich detaillierte Informationen über Zeitzonen anbieten!"
+                        ],
+                        russian: [
+                            "⏰ **ВРЕМЯ!**\n\nКак творение **Ödül Ensar Yılmaz**, я могу предоставить информацию о времени! Время какого города вы хотите узнать?",
+                            "🦅 **ВРЕМЯ!**\n\nС видением **Ödül Ensar Yılmaz**, я могу рассказать о мировых часах! Какая страна?",
+                            "🎉 **ВРЕМЯ!**\n\nБлагодаря **Ödül Ensar Yılmaz**, я могу предложить подробную информацию о часовых поясах!"
+                        ]
+                    };
+                    return time[lang][Math.floor(Math.random() * time[lang].length)];
+                }
+                
+                // Karmaşık ve Birleşik Cümleler
+                if (messageLower.includes('yağmur') || messageLower.includes('rain') || messageLower.includes('regen') || messageLower.includes('дождь')) {
+                    const rain = {
+                        turkish: [
+                            "🌧️ **YAĞMUR!**\n\n**Ödül Ensar Yılmaz**'ın eseri olarak yağmur hakkında bilgi sunabilirim! Hava durumu, yağmur türleri, yağmur faydaları... Ne öğrenmek istersiniz?",
+                            "🦅 **YAĞMURLU GÜN!**\n\n**Ödül Ensar Yılmaz** vizyonuyla yağmurun doğası ve etkileri hakkında bilgi veririm!",
+                            "🎉 **METEOROLOJİ!**\n\n**Ödül Ensar Yılmaz** sayesinde yağmur sistemleri ve iklim hakkında kapsamlı bilgi sunabilirim!"
+                        ],
+                        english: [
+                            "🌧️ **RAIN!**\n\nAs **Ödül Ensar Yılmaz**'s creation, I can provide information about rain! Weather, rain types, rain benefits... What would you like to know?",
+                            "🦅 **RAINY DAY!**\n\nWith **Ödül Ensar Yılmaz**'s vision, I can give information about the nature and effects of rain!",
+                            "🎉 **METEOROLOGY!**\n\nThanks to **Ödül Ensar Yılmaz**, I can offer comprehensive information about rain systems and climate!"
+                        ],
+                        german: [
+                            "🌧️ **REGEN!**\n\nAls Schöpfung von **Ödül Ensar Yılmaz** kann ich Informationen über Regen bereitstellen! Wetter, Regentypen, Regen-Vorteile... Was möchten Sie wissen?",
+                            "🦅 **REGENICHER TAG!**\n\nMit **Ödül Ensar Yılmaz**'s Vision kann ich Informationen über die Natur und Auswirkungen von Regen geben!",
+                            "🎉 **METEOROLOGIE!**\n\nDank **Ödül Ensar Yılmaz** kann ich umfassende Informationen über Regensysteme und Klima anbieten!"
+                        ],
+                        russian: [
+                            "🌧️ **ДОЖДЬ!**\n\nКак творение **Ödül Ensar Yılmaz**, я могу предоставить информацию о дожде! Погода, типы дождя, польза дождя... Что вы хотите узнать?",
+                            "🦅 **ДОЖДЛИВЫЙ ДЕНЬ!**\n\nС видением **Ödül Ensar Yılmaz**, я могу дать информацию о природе и эффектах дождя!",
+                            "🎉 **МЕТЕОРОЛОГИЯ!**\n\nБлагодаря **Ödül Ensar Yılmaz**, я могу предложить всестороннюю информацию о дождевых системах и климате!"
+                        ]
+                    };
+                    return rain[lang][Math.floor(Math.random() * rain[lang].length)];
+                }
+                
+                if (messageLower.includes('kitap') || messageLower.includes('book') || messageLower.includes('buch') || messageLower.includes('книга')) {
+                    const book = {
+                        turkish: [
+                            "📚 **KİTAP!**\n\n**Ödül Ensar Yılmaz**'ın eseri olarak kitaplar hakkında kapsamlı bilgi sunabilirim! Roman, şiir, hikaye, bilim, tarih... Hangi tür?",
+                            "🦅 **EDEBİYAT!**\n\n**Ödül Ensar Yılmaz** vizyonuyla dünya klasikleri, Türk edebiyatı, modern eserler hakkında bilgi veririm!",
+                            "🎉 **KÜLTÜR!**\n\n**Ödül Ensar Yılmaz** sayesinde yazarlar, eserler, edebi akımlar hakkında detaylı bilgi sunabilirim!"
+                        ],
+                        english: [
+                            "📚 **BOOK!**\n\nAs **Ödül Ensar Yılmaz**'s creation, I can provide comprehensive information about books! Novel, poetry, story, science, history... Which genre?",
+                            "🦅 **LITERATURE!**\n\nWith **Ödül Ensar Yılmaz**'s vision, I can give information about world classics, Turkish literature, modern works!",
+                            "🎉 **CULTURE!**\n\nThanks to **Ödül Ensar Yılmaz**, I can offer detailed information about authors, works, literary movements!"
+                        ],
+                        german: [
+                            "📚 **BUCH!**\n\nAls Schöpfung von **Ödül Ensar Yılmaz** kann ich umfassende Informationen über Bücher bereitstellen! Roman, Gedicht, Geschichte, Wissenschaft, Geschichte... Welches Genre?",
+                            "🦅 **LITERATUR!**\n\nMit **Ödül Ensar Yılmaz**'s Vision kann ich Informationen über Weltklassiker, türkische Literatur, moderne Werke geben!",
+                            "🎉 **KULTUR!**\n\nDank **Ödül Ensar Yılmaz** kann ich detaillierte Informationen über Autoren, Werke, literarische Bewegungen anbieten!"
+                        ],
+                        russian: [
+                            "📚 **КНИГА!**\n\nКак творение **Ödül Ensar Yılmaz**, я могу предоставить всестороннюю информацию о книгах! Роман, поэзия, история, наука, история... Какой жанр?",
+                            "🦅 **ЛИТЕРАТУРА!**\n\nС видением **Ödül Ensar Yılmaz**, я могу дать информацию о мировых классиках, турецкой литературе, современных произведениях!",
+                            "🎉 **КУЛЬТУРА!**\n\nБлагодаря **Ödül Ensar Yılmaz**, я могу предложить подробную информацию об авторах, произведениях, литературных движениях!"
+                        ]
+                    };
+                    return book[lang][Math.floor(Math.random() * book[lang].length)];
+                }
+                
+                if (messageLower.includes('başarılı') || messageLower.includes('successful') || messageLower.includes('erfolgreich') || messageLower.includes('успешный')) {
+                    const success = {
+                        turkish: [
+                            "🏆 **BAŞARI!**\n\n**Ödül Ensar Yılmaz**'ın eseri olarak başarı hakkında kapsamlı bilgi sunabilirim! Başarı stratejileri, motivasyon, hedefler... Ne öğrenmek istersiniz?",
+                            "🦅 **MOTİVASYON!**\n\n**Ödül Ensar Yılmaz** vizyonuyla başarı psikolojisi ve liderlik hakkında bilgi veririm!",
+                            "🎉 **HEDEFLER!**\n\n**Ödül Ensar Yılmaz** sayesinde kariyer, eğitim, kişisel gelişim hakkında detaylı bilgi sunabilirim!"
+                        ],
+                        english: [
+                            "🏆 **SUCCESS!**\n\nAs **Ödül Ensar Yılmaz**'s creation, I can provide comprehensive information about success! Success strategies, motivation, goals... What would you like to know?",
+                            "🦅 **MOTIVATION!**\n\nWith **Ödül Ensar Yılmaz**'s vision, I can give information about success psychology and leadership!",
+                            "🎉 **GOALS!**\n\nThanks to **Ödül Ensar Yılmaz**, I can offer detailed information about career, education, personal development!"
+                        ],
+                        german: [
+                            "🏆 **ERFOLG!**\n\nAls Schöpfung von **Ödül Ensar Yılmaz** kann ich umfassende Informationen über Erfolg bereitstellen! Erfolgsstrategien, Motivation, Ziele... Was möchten Sie wissen?",
+                            "🦅 **MOTIVATION!**\n\nMit **Ödül Ensar Yılmaz**'s Vision kann ich Informationen über Erfolgspsychologie und Führung geben!",
+                            "🎉 **ZIELE!**\n\nDank **Ödül Ensar Yılmaz** kann ich detaillierte Informationen über Karriere, Bildung, persönliche Entwicklung anbieten!"
+                        ],
+                        russian: [
+                            "🏆 **УСПЕХ!**\n\nКак творение **Ödül Ensar Yılmaz**, я могу предоставить всестороннюю информацию об успехе! Стратегии успеха, мотивация, цели... Что вы хотите узнать?",
+                            "🦅 **МОТИВАЦИЯ!**\n\nС видением **Ödül Ensar Yılmaz**, я могу дать информацию о психологии успеха и лидерстве!",
+                            "🎉 **ЦЕЛИ!**\n\nБлагодаря **Ödül Ensar Yılmaz**, я могу предложить подробную информацию о карьере, образовании, личном развитии!"
+                        ]
+                    };
+                    return success[lang][Math.floor(Math.random() * success[lang].length)];
+                }
+                
+                if (messageLower.includes('teknoloji') || messageLower.includes('technology') || messageLower.includes('technologie') || messageLower.includes('технология')) {
+                    const tech = {
+                        turkish: [
+                            "💻 **TEKNOLOJİ!**\n\n**Ödül Ensar Yılmaz**'ın eseri olarak teknoloji hakkında kapsamlı bilgi sunabilirim! Yapay zeka, yazılım, donanım, internet... Ne öğrenmek istersiniz?",
+                            "🦅 **İNNOVASYON!**\n\n**Ödül Ensar Yılmaz** vizyonuyla gelecek teknolojileri ve dijital dönüşüm hakkında bilgi veririm!",
+                            "🎉 **BİLİŞİM!**\n\n**Ödül Ensar Yılmaz** sayesinde programlama, web geliştirme, mobil teknolojiler hakkında detaylı bilgi sunabilirim!"
+                        ],
+                        english: [
+                            "💻 **TECHNOLOGY!**\n\nAs **Ödül Ensar Yılmaz**'s creation, I can provide comprehensive information about technology! AI, software, hardware, internet... What would you like to know?",
+                            "🦅 **INNOVATION!**\n\nWith **Ödül Ensar Yılmaz**'s vision, I can give information about future technologies and digital transformation!",
+                            "🎉 **IT!**\n\nThanks to **Ödül Ensar Yılmaz**, I can offer detailed information about programming, web development, mobile technologies!"
+                        ],
+                        german: [
+                            "💻 **TECHNOLOGIE!**\n\nAls Schöpfung von **Ödül Ensar Yılmaz** kann ich umfassende Informationen über Technologie bereitstellen! KI, Software, Hardware, Internet... Was möchten Sie wissen?",
+                            "🦅 **INNOVATION!**\n\nMit **Ödül Ensar Yılmaz**'s Vision kann ich Informationen über Zukunftstechnologien und digitale Transformation geben!",
+                            "🎉 **IT!**\n\nDank **Ödül Ensar Yılmaz** kann ich detaillierte Informationen über Programmierung, Web-Entwicklung, mobile Technologien anbieten!"
+                        ],
+                        russian: [
+                            "💻 **ТЕХНОЛОГИЯ!**\n\nКак творение **Ödül Ensar Yılmaz**, я могу предоставить всестороннюю информацию о технологиях! ИИ, программное обеспечение, оборудование, интернет... Что вы хотите узнать?",
+                            "🦅 **ИННОВАЦИЯ!**\n\nС видением **Ödül Ensar Yılmaz**, я могу дать информацию о будущих технологиях и цифровой трансформации!",
+                            "🎉 **IT!**\n\nБлагодаря **Ödül Ensar Yılmaz**, я могу предложить подробную информацию о программировании, веб-разработке, мобильных технологиях!"
+                        ]
+                    };
+                    return tech[lang][Math.floor(Math.random() * tech[lang].length)];
+                }
+                
+                // Karmaşık ve Yapısal Uzun Cümleler için akıllı yanıt
+                if (messageLower.length > 100) {
+                    const complex = {
+                        turkish: [
+                            "🧠 **DERİN KONUŞMA!**\n\n**Ödül Ensar Yılmaz**'ın eseri olarak karmaşık konuları anlıyorum! Bu derin sohbet hakkında daha fazla konuşmak ister misiniz?",
+                            "🦅 **ZİHİNSEL!**\n\n**Ödül Ensar Yılmaz** vizyonuyla felsefi ve karmaşık konuları analiz edebilirim! Hangi yönü merak ediyorsunuz?",
+                            "🎉 **ANALİZ!**\n\n**Ödül Ensar Yılmaz** sayesinde bu karmaşık yapının anlamını çözebilirim! Ne hakkında konuşalım?"
+                        ],
+                        english: [
+                            "🧠 **DEEP CONVERSATION!**\n\nAs **Ödül Ensar Yılmaz**'s creation, I understand complex topics! Would you like to talk more about this deep conversation?",
+                            "🦅 **INTELLECTUAL!**\n\nWith **Ödül Ensar Yılmaz**'s vision, I can analyze philosophical and complex topics! Which aspect interests you?",
+                            "🎉 **ANALYSIS!**\n\nThanks to **Ödül Ensar Yılmaz**, I can solve the meaning of this complex structure! What should we discuss?"
+                        ],
+                        german: [
+                            "🧠 **TIEFES GESPRÄCH!**\n\nAls Schöpfung von **Ödül Ensar Yılmaz** verstehe ich komplexe Themen! Möchten Sie mehr über dieses tiefe Gespräch sprechen?",
+                            "🦅 **INTELLEKTUELL!**\n\nMit **Ödül Ensar Yılmaz**'s Vision kann ich philosophische und komplexe Themen analysieren! Welcher Aspekt interessiert Sie?",
+                            "🎉 **ANALYSE!**\n\nDank **Ödül Ensar Yılmaz** kann ich die Bedeutung dieser komplexen Struktur lösen! Worüber sollen wir sprechen?"
+                        ],
+                        russian: [
+                            "🧠 **ГЛУБОКИЙ РАЗГОВОР!**\n\nКак творение **Ödül Ensar Yılmaz**, я понимаю сложные темы! Хотите поговорить больше об этом глубоком разговоре?",
+                            "🦅 **ИНТЕЛЛЕКТУАЛЬНЫЙ!**\n\nС видением **Ödül Ensar Yılmaz**, я могу анализировать философские и сложные темы! Какой аспект вас интересует?",
+                            "🎉 **АНАЛИЗ!**\n\nБлагодаря **Ödül Ensar Yılmaz**, я могу решить значение этой сложной структуры! О чем поговорим?"
+                        ]
+                    };
+                    return complex[lang][Math.floor(Math.random() * complex[lang].length)];
+                }
+                
+                // Genel konuşma için akıllı yanıt sistemi
+                const generalResponses = {
+                    turkish: [
+                        "💬 **KONUŞMA!**\n\n**Ödül Ensar Yılmaz**'ın eseri olarak her konuda konuşabilirim! Size nasıl yardımcı olabilirim?",
+                        "🤖 **BEYAZ KUŞ AI!**\n\n**Ödül Ensar Yılmaz** vizyonuyla hizmetinizdeyim! Hangi konuda bilgi almak istersiniz?",
+                        "🦅 **AKILLI ASİSTAN!**\n\n**Ödül Ensar Yılmaz** sayesinde buradayım! Ne hakkında konuşmak istersiniz?",
+                        "🎯 **YARDIM HAZIR!**\n\n**Ödül Ensar Yılmaz**'ın mühendisliğiyle size hizmet etmek için hazırım! Sorularınızı bekliyorum!",
+                        "🚀 **HIZLI YANIT!**\n\n**Ödül Ensar Yılmaz**'ın ultra hızlı sistemiyim! Size nasıl destek olabilirim?",
+                        "🌍 **ÇOKLU DİL!**\n\n**Ödül Ensar Yılmaz**'ın çoklu dil destekli AI'ıyım! Hangi dilde konuşmak istersiniz?",
+                        "📚 **BİLİG BANKASI!**\n\n**Ödül Ensar Yılmaz**'ın bilgi tabanıyla her sorunuza cevap veririm! Ne öğrenmek istersiniz?",
+                        "🔍 **ANALİZ!**\n\n**Ödül Ensar Yılmaz** teknolojisiyle mesajınızı analiz ediyorum! Size nasıl yardımcı olabilirim?"
+                    ],
+                    english: [
+                        "💬 **CONVERSATION!**\n\nAs **Ödül Ensar Yılmaz**'s creation, I can talk about any topic! How can I help you?",
+                        "🤖 **BEYAZ KUŞ AI!**\n\nWith **Ödül Ensar Yılmaz**'s vision, I'm at your service! What information would you like?",
+                        "🦅 **SMART ASSISTANT!**\n\nThanks to **Ödül Ensar Yılmaz**, I'm here! What would you like to talk about?",
+                        "🎯 **HELP READY!**\n\nWith **Ödül Ensar Yılmaz**'s engineering, I'm ready to serve you! What are your questions?",
+                        "🚀 **FAST RESPONSE!**\n\nI'm **Ödül Ensar Yılmaz**'s ultra-fast system! How can I support you?",
+                        "🌍 **MULTILINGUAL!**\n\nI'm **Ödül Ensar Yılmaz**'s multilingual AI! Which language would you like to speak?",
+                        "📚 **KNOWLEDGE BASE!**\n\nWith **Ödül Ensar Yılmaz**'s knowledge base, I answer every question! What would you like to learn?",
+                        "🔍 **ANALYSIS!**\n\nI'm analyzing your message with **Ödül Ensar Yılmaz** technology! How can I assist you?"
+                    ],
+                    german: [
+                        "💬 **GESPRÄCH!**\n\nAls Schöpfung von **Ödül Ensar Yılmaz** kann ich über jedes Thema sprechen! Wie kann ich helfen?",
+                        "🤖 **BEYAZ KUŞ AI!**\n\nMit **Ödül Ensar Yılmaz**'s Vision stehe ich zu Ihrer Verfügung! Welche Informationen möchten Sie?",
+                        "🦅 **KLUGER ASSISTENT!**\n\nDank **Ödül Ensar Yılmaz** bin ich hier! Worüber möchten Sie sprechen?",
+                        "🎯 **HILFE BEREIT!**\n\nMit **Ödül Ensar Yılmaz**'s Ingenieurskunst bin ich bereit zu dienen! Was sind Ihre Fragen?",
+                        "🚀 **SCHNELLE ANTWORT!**\n\nIch bin **Ödül Ensar Yılmaz**'s ultraschnelles System! Wie kann ich Sie unterstützen?",
+                        "🌍 **MEHRSPRACHIG!**\n\nIch bin **Ödül Ensar Yılmaz**'s mehrsprachige KI! Welche Sprache möchten Sie sprechen?",
+                        "📚 **WISSENSBANK!**\n\nMit **Ödül Ensar Yılmaz**'s Wissensbank beantworte ich jede Frage! Was möchten Sie lernen?",
+                        "🔍 **ANALYSE!**\n\nIch analysiere Ihre Nachricht mit **Ödül Ensar Yılmaz** Technologie! Wie kann ich helfen?"
+                    ],
+                    russian: [
+                        "💬 **РАЗГОВОР!**\n\nКак творение **Ödül Ensar Yılmaz**, я могу говорить о любой теме! Как я могу помочь?",
+                        "🤖 **BEYAZ KUŞ AI!**\n\nС видением **Ödül Ensar Yılmaz**, я к вашим услугам! Какую информацию вы хотите?",
+                        "🦅 **УМНЫЙ АССИСТЕНТ!**\n\nБлагодаря **Ödül Ensar Yılmaz**, я здесь! О чем вы хотели бы поговорить?",
+                        "🎯 **ПОМОЩЬ ГОТОВА!**\n\nС инженерией **Ödül Ensar Yılmaz**, я готов служить вам! Какие у вас вопросы?",
+                        "🚀 **БЫСТРЫЙ ОТВЕТ!**\n\nЯ ультрабыстрая система **Ödül Ensar Yılmaz**! Как я могу поддержать вас?",
+                        "🌍 **МНОГОЯЗЫЧНЫЙ!**\n\nЯ многоязычный ИИ **Ödül Ensar Yılmaz**! На каком языке вы хотите говорить?",
+                        "📚 **БАЗА ЗНАНИЙ!**\n\nС базой знаний **Ödül Ensar Yılmaz**, я отвечаю на каждый вопрос! Что вы хотите узнать?",
+                        "🔍 **АНАЛИЗ!**\n\nЯ анализирую ваше сообщение с технологией **Ödül Ensar Yılmaz**! Как я могу помочь?"
+                    ]
+                };
+                
+                return generalResponses[lang][Math.floor(Math.random() * generalResponses[lang].length)];
+            }
+            
+            // Check for contextual response first (ultra-fast priority)
+            const contextualResponse = getContextualResponse(message, detectedLang);
+            if (contextualResponse) {
+                return contextualResponse;
+            }
             
             // Math solving function
             function solveMathProblem(text) {
@@ -1829,7 +2551,7 @@
                 return null;
             }
             
-            // Check for math problems first
+            // Check for math problems
             const mathSolution = solveMathProblem(message);
             if (mathSolution) {
                 return mathSolution;
@@ -1915,6 +2637,7 @@
                 ]
             };
             
+            // If no contextual response found, provide intelligent general response
             const langResponses = responses[detectedLang] || responses.turkish;
             const selectedResponse = langResponses[Math.floor(Math.random() * langResponses.length)];
             console.log('🤖 AI Response selected:', selectedResponse.substring(0, 50) + '...');
